@@ -41,5 +41,3 @@ form.addEventListener('submit', (e) => {
   binNum.value = "";
   e.preventDefault();
 })
-
-container.style.backgroundColor = 'red';
