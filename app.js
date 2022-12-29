@@ -16,17 +16,24 @@ binNum.addEventListener('input', (e) => {
   }
 })
 form.addEventListener('submit', (e) => {
-  let numbers = /^[0-1]+$/;
+  let numbers = /^[.0-1]+$/;
   let result = 0;
+  let wholeNum = binNum.value;
+  let decimalNum = '';
   if (numbers.test(binNum.value)) {
-    if (binNum.value.length === 1) {
-      result += binNum.value * (2 ** 0);
-    } else {
-      for (let i = 0; i < binNum.value.length; i++) {
-        result += binNum.value.charAt(binNum.value.length - (i + 1)) * 2 ** i;
-      }
+    if (binNum.value.includes(".")) {
+      wholeNum = binNum.value.slice(0, binNum.value.indexOf("."));
+      decimalNum = binNum.value.slice((binNum.value.indexOf(".") + 1));
     }
-    decimal.innerHTML = `The decimal of the binary number ${binNum.value} is ${result}`;
+    // Looping through the whole number
+    for (let i = 0; i < wholeNum.length; i++) {
+      result += wholeNum.charAt(wholeNum.length - (i + 1)) * 2 ** i;
+    }
+    // Looping through the decimal number
+    for (let j = 0; j < decimalNum.length; j++) {
+      result += decimalNum.charAt(j) * 2 ** (-(j + 1))
+    }
+    decimal.innerHTML = `The decimal of the whole number ${wholeNum} is ${result}`;
   } else {
     decimal.innerHTML = `${binNum.value} is not binary number, 0 and/or 1 allowed`;
   }
