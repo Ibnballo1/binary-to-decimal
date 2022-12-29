@@ -6,14 +6,54 @@
 }
 
 div.container {
-  border: 2px solid red;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(orange, green);
 }
 
-div.container h1 {
+.title {
+  color: #006ec3;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 46px;
+  text-shadow: 2px 2px 8px #fff;
+}
+
+.text {
+  color: yellow;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+div.container h1,
+div.container .text,
+.warning {
   font-family: 'Poppins', sans-serif;
+}
+
+form {
+  margin-bottom: 12px;
+}
+
+input {
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+input[type='submit'] {
+  background-color: #006ec3;
+  color: #fff;
+}
+
+.warning {
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 4px;
 }
