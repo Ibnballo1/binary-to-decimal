@@ -33,7 +33,7 @@ form.addEventListener('submit', (e) => {
     for (let j = 0; j < decimalNum.length; j++) {
       result += decimalNum.charAt(j) * 2 ** (-(j + 1))
     }
-    decimal.innerHTML = `The decimal of the whole number ${wholeNum} is ${result}`;
+    decimal.innerHTML = `${binNum.value}<sub style="font-size:16px">2</sub> = ${result}<sub style="font-size:16px">10</sub>`;
   } else {
     decimal.innerHTML = `${binNum.value} is not binary number, 0 and/or 1 allowed`;
   }
