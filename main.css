@@ -28,9 +28,7 @@ div.container {
   margin-bottom: 12px;
 }
 
-div.container h1,
-div.container .text,
-.warning {
+.f-family {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -42,7 +40,6 @@ input {
   border: none;
   padding: 8px;
   border-radius: 6px;
-  font-family: 'Poppins', sans-serif;
   font-size: 16px;
 }
 
