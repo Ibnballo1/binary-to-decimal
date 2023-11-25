@@ -50,5 +50,6 @@ input[type='submit'] {
 
 .error-msg {
   font-size: 1.25rem;
-  color: yellow;
+  color: red;
+  text-shadow: 2px 2px 8px #fff;
 }
