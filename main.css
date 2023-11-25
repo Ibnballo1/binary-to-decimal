@@ -12,35 +12,28 @@ div.container {
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(orange, green);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  gap: 1rem;
 }
 
 .title {
   color: #006ec3;
   font-weight: 700;
   font-size: 2rem;
-  line-height: 46px;
   text-shadow: 2px 2px 8px #fff;
 }
 
 .text {
   color: yellow;
   font-size: 1.25rem;
-  margin-bottom: 12px;
-}
-
-.f-family {
-  font-family: 'Poppins', sans-serif;
-}
-
-form {
-  margin-bottom: 12px;
 }
 
 input {
   border: none;
   padding: 8px;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 input[type='submit'] {
@@ -53,4 +46,10 @@ input[type='submit'] {
   font-size: 2.5rem;
   color: #fff;
   padding: 4px;
+}
+
+.error-msg {
+  font-size: 1.25rem;
+  color: red;
+  text-shadow: 2px 2px 8px #fff;
 }

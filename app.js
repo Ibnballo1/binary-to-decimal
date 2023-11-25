@@ -8,10 +8,11 @@ binNum.addEventListener('input', (e) => {
   decimal.innerHTML = '';
   for (let i = 0; i < val.length; i++) {
     if (val.charAt(i) === "0" || val.charAt(i) === "1") {
-      val;
+      // val;
       decimal.innerHTML = '';
     } else {
-      decimal.innerHTML = `${binNum.value} is not binary number`;
+      decimal.innerHTML = `<p class="error-msg">${binNum.value} is not a binary number</p>`;
+      break;
     }
   }
 })
@@ -35,7 +36,7 @@ form.addEventListener('submit', (e) => {
     }
     decimal.innerHTML = `${binNum.value}<sub style="font-size:16px">2</sub> = ${result}<sub style="font-size:16px">10</sub>`;
   } else {
-    decimal.innerHTML = `${binNum.value} is not binary number, 0 and/or 1 allowed`;
+    decimal.innerHTML = `<p class="error-msg">${binNum.value} is not a binary number, only 0s and/or 1s are allowed</p>`;
   }
 
   binNum.value = "";
